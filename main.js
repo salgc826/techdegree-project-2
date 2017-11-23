@@ -1,5 +1,5 @@
 const pageList = document.querySelector('ul');
-const eachStudent = pageList.children;
+const perStudent = pageList.children;
 const buttonDiv = document.querySelector('.pagination');
 const buttonUl = buttonDiv.querySelector('ul');
 const studentsPerPage = 10;
@@ -9,17 +9,17 @@ const noResultDiv = document.querySelector('.no-result');
 
 // This Function helps determine number of pages  based on how many students are in total
 function determineNumberOfPages() {
-    let numberOfPages = Math.ceil(eachStudent.length / studentsPerPage);
+    let numberOfPages = Math.ceil(perStudent.length / studentsPerPage);
     return numberOfPages;
 }
 
 // Function to automatically show first ten students when page loads
 function showFirstTen() {
-    for (let i = 0; i < eachStudent.length; i++) {
+    for (let i = 0; i < perStudent.length; i++) {
         if (i < studentsPerPage) {
-            eachStudent[i].style.display = '';
+            perStudent[i].style.display = '';
         } else {
-            eachStudent[i].style.display = 'none';
+            perStudent[i].style.display = 'none';
         }
     }
 }
@@ -40,17 +40,17 @@ const searchResults = [];
 searchButton.addEventListener('click', () => {
     let filter = searchInput.value.toLowerCase();
     searchResults.length = 0;
-    for (let i = 0; i < eachStudent.length; i++) {
-        if (eachStudent[i].innerHTML.indexOf(filter) > -1) {
-            eachStudent[i].style.display = '';
+    for (let i = 0; i < perStudent.length; i++) {
+        if (perStudent[i].innerHTML.indexOf(filter) > -1) {
+            perStudent[i].style.display = '';
 
         } else {
-            eachStudent[i].style.display = 'none';
+            perStudent[i].style.display = 'none';
             searchResults.push(i);
         }
     }
     // If all students are hidden, a 'not found' message is displayed
-    if (searchResults.length === eachStudent.length) {
+    if (searchResults.length === perStudent.length) {
         noResultDiv.innerHTML = '<h1> Not found</h1>';
     } else {
         noResultDiv.innerHTML = '';
@@ -89,9 +89,9 @@ buttonDiv.addEventListener('click', (event) => {
     let min = max - 10;
     for (let i = 0; i < eachStudent.length; i++) {
         if (i >= min && i < max) {
-            eachStudent[i].style.display = '';
+            perStudent[i].style.display = '';
         }  else {
-            eachStudent[i].style.display = 'none';
+            perStudent[i].style.display = 'none';
         }
     }
 });
