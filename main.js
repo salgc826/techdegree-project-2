@@ -24,7 +24,7 @@ function firstTen() {
     }
 }
 
-// Function to display search box dynamically
+// This function shows the search box
 let searchInput = document.createElement('input');
 let searchButton = document.createElement('button');
 function showSearch() {
@@ -34,21 +34,7 @@ function showSearch() {
     searchDiv.appendChild(searchButton);
 }
 
-// This is to divide students between pages
-//buttonDiv.addEventListener('click', (event) => {
-    //noResultDiv.innerHTML = '';
-  //  let buttonNumber = parseInt(event.target.textContent);
-  //  let max = buttonNumber * 10;
-  //  let min = max - 10;
-  //  for (let i = 0; i < perStudent.length; i++) {
-    //    if (i >= min && i < max) {
-      //      perStudent[i].style.display = '';
-      //  }  else {
-      //      perStudent[i].style.display = 'none';
-      //  }
-  //  }
-//});
-
+// This divides the students between pages
 
 for (let i = 1; i <= determineNumberOfPages(); i++) {
     let pageli = document.createElement('li');
@@ -74,7 +60,7 @@ buttonDiv.addEventListener('click', (event) => {
 });
 
 
-// Shows the first ten students
+// Shows the first ten students when the page loads
 firstTen();
 
 // Function call to show search box if JavaScript is enabled
