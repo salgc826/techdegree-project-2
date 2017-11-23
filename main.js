@@ -14,7 +14,7 @@ function determineNumberOfPages() {
 }
 
 // Function to automatically show first ten students when page loads
-function showFirstTen() {
+function firstTen() {
     for (let i = 0; i < perStudent.length; i++) {
         if (i < studentsPerPage) {
             perStudent[i].style.display = '';
@@ -75,7 +75,7 @@ buttonDiv.addEventListener('click', (event) => {
 
 
 // Shows the first ten students
-showFirstTen();
+firstTen();
 
 // Function call to show search box if JavaScript is enabled
 showSearch();
