@@ -49,13 +49,7 @@ searchButton.addEventListener('click', () => {
             searchResults.push(i);
         }
     }
-    // If all students are hidden, a 'not found' message is displayed
-    if (searchResults.length === perStudent.length) {
-        noResultDiv.innerHTML = '<h1> Not found</h1>';
-    } else {
-        noResultDiv.innerHTML = '';
-    }
-});
+
 
 // This is to divide students between pages
 //buttonDiv.addEventListener('click', (event) => {
