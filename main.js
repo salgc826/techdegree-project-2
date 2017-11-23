@@ -35,27 +35,7 @@ function showSearch() {
 }
 
 
-// Array to hold number of hidden students
-const searchResults = [];
-searchButton.addEventListener('click', () => {
-    let filter = searchInput.value.toLowerCase();
-    searchResults.length = 0;
-    for (let i = 0; i < perStudent.length; i++) {
-        if (perStudent[i].innerHTML.indexOf(filter) > -1) {
-            perStudent[i].style.display = '';
 
-        } else {
-            perStudent[i].style.display = 'none';
-            searchResults.push(i);
-        }
-    }
-    // If all students are hidden, a 'not found' message is displayed
-    if (searchResults.length === perStudent.length) {
-        noResultDiv.innerHTML = '<h1> Not found</h1>';
-    } else {
-        noResultDiv.innerHTML = '';
-    }
-});
 
 // This is to divide students between pages
 //buttonDiv.addEventListener('click', (event) => {
