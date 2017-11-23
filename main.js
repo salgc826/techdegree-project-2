@@ -9,8 +9,8 @@ const noResultDiv = document.querySelector('.no-result');
 
 // This Function helps determine number of pages  based on how many students are in total
 function determineNumberOfPages() {
-    let numberofpages = Math.ceil(eachStudent.length / studentsPerPage);
-    return numberofpages;
+    let numberOfPages = Math.ceil(eachStudent.length / studentsPerPage);
+    return NumberOfPages;
 }
 
 // Function to automatically show first ten students when page loads
