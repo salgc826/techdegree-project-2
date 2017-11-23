@@ -4,7 +4,7 @@ const buttonDiv = document.querySelector('.pagination');
 const buttonUl = buttonDiv.querySelector('ul');
 const studentsPerPage = 10;
 const searchDiv = document.querySelector('.student-search');
-const noResultDiv = document.querySelector('.no-result');
+
 
 
 // This Function helps determine number of pages  based on how many students are in total
@@ -33,9 +33,6 @@ function showSearch() {
     searchDiv.appendChild(searchInput);
     searchDiv.appendChild(searchButton);
 }
-
-
-
 
 // This is to divide students between pages
 //buttonDiv.addEventListener('click', (event) => {
