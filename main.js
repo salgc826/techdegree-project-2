@@ -63,11 +63,11 @@ searchButton.addEventListener('click', () => {
   //  let buttonNumber = parseInt(event.target.textContent);
   //  let max = buttonNumber * 10;
   //  let min = max - 10;
-  //  for (let i = 0; i < eachStudent.length; i++) {
+  //  for (let i = 0; i < perStudent.length; i++) {
     //    if (i >= min && i < max) {
-      //      eachStudent[i].style.display = '';
+      //      perStudent[i].style.display = '';
       //  }  else {
-      //      eachStudent[i].style.display = 'none';
+      //      perStudent[i].style.display = 'none';
       //  }
   //  }
 //});
@@ -87,7 +87,7 @@ buttonDiv.addEventListener('click', (event) => {
     let buttonNumber = parseInt(event.target.textContent);
     let max = buttonNumber * 10;
     let min = max - 10;
-    for (let i = 0; i < eachStudent.length; i++) {
+    for (let i = 0; i < perStudent.length; i++) {
         if (i >= min && i < max) {
             perStudent[i].style.display = '';
         }  else {
